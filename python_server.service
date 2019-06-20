@@ -1,0 +1,10 @@
+[Unit]
+Description=Python-server
+
+[Service]
+User=pythonuser
+WorkingDirectory=/home/pythonuser
+ExecStart=/usr/bin/python /home/pythonuser/app.py
+
+[Install]
+WantedBy=multi-user.target
