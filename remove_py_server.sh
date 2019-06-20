@@ -1,7 +1,7 @@
 #Stop python service
 sudo systemctl stop python_server
 
-#uninstall jenkins
+#uninstall python services
 sudo apt-get remove --purge python_server
 
 sudo userdel pythonuser
