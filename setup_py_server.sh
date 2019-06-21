@@ -2,16 +2,22 @@
 sudo apt install -y wget vim python
 
 #creating a user
-sudo useradd --create-home pythonuser
-sudo usermod --shell /bin/bash pythonuser
+getent passwd pythonuser > /dev/null
+
+if [ $? -eq 0 ]; then
+	echo "User exists"
+else
+	sudo useradd --create-home pythonuser
+	sudo usermod --shell /bin/bash pythonuser
+fi
 
 #Enter user environment
 
-sudo cp app.py /home/pythonuser
+#sudo cp app.py /home/pythonuser
 
-sudo su - pythonuser -c "mkdir public"
+#sudo su - pythonuser -c "mkdir -p  public"
 
-sudo cp public/index.html /home/pythonuser/public
+#sudo cp public/index.html /home/pythonuser/public
 
 #Writing service file
 
