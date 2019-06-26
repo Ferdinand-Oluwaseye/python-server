@@ -19,6 +19,8 @@ sudo su - pythonuser -c "mkdir -p  public"
 
 sudo cp public/index.html /home/pythonuser/public
 
+sudo chown -R pythonuser:pythonuser /home/pythonuser
+
 #Writing service file
 
 sudo cp python_server.service /etc/systemd/system/python_server.service
