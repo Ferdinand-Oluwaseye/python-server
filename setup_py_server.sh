@@ -13,11 +13,11 @@ fi
 
 #Enter user environment
 
-#sudo cp app.py /home/pythonuser
+sudo cp app.py /home/pythonuser
 
-#sudo su - pythonuser -c "mkdir -p  public"
+sudo su - pythonuser -c "mkdir -p  public"
 
-#sudo cp public/index.html /home/pythonuser/public
+sudo cp public/index.html /home/pythonuser/public
 
 #Writing service file
 
